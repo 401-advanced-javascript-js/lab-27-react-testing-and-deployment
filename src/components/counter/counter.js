@@ -1,5 +1,7 @@
 import React from 'react';
 
+import('./counter.scss');
+
 class Counter extends React.Component {
   constructor(props) {
     super(props);
@@ -7,11 +9,13 @@ class Counter extends React.Component {
   }
 
   handleUp = e => {
+    e.preventDefault();
     let count = this.state.count + 1;
     this.updateCounter(count);
   };
 
   handleDown = e => {
+    e.preventDefault();
     let count = this.state.count - 1;
     this.updateCounter(count);
   };
@@ -30,11 +34,11 @@ class Counter extends React.Component {
     let classes = ['count', this.state.polarity].join(' ');
     return (
       <section className="counter">
-        <a href="#" className="down clicker" onClick={this.handleDown}>
+        <a href="/" className="down clicker" onClick={this.handleDown}>
           -
         </a>
         <span className={classes}>{this.state.count}</span>
-        <a href="#" className="up clicker" onClick={this.handleUp}>
+        <a href="/" className="up clicker" onClick={this.handleUp}>
           +
         </a>
       </section>

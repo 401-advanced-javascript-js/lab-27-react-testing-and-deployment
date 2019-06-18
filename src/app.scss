@@ -1,0 +1,13 @@
+$backgroundColor: #595F72;
+$textDefaultColor: #FFEDDF;
+
+body {
+  background-color: $backgroundColor;
+  color: $textDefaultColor;
+}
+
+header {
+  text-align: center;
+  color: rgb(28, 40, 68);
+  font-size: 30pt;
+}
