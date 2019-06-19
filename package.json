@@ -20,7 +20,8 @@
   },
   "devDependencies": {
     "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-jest": "^22.6.4"
+    "eslint-plugin-jest": "^22.6.4",
+    "react-styleguidist": "^9.1.7"
   },
   "scripts": {
     "start": "react-scripts start",
