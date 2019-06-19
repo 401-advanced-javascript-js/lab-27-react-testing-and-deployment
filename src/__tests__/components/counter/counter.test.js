@@ -1,18 +1,20 @@
+/* eslint-disable no-undef */
+
 'use strict';
 
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Counter from '../../../components/counter/counter.js';
+import Counter from '../../../components/counter/counter';
 
 // tests provided by code fellows
 describe('<Counter/> (Enzyme Test)', () => {
   it('is alive at application start', () => {
-    let app = mount(<Counter />);
+    const app = mount(<Counter />);
     expect(app.find('.count').text()).toBe('0');
   });
 
   it('can count up', () => {
-    let app = mount(<Counter />);
+    const app = mount(<Counter />);
     app.find('.up').simulate('click');
     expect(app.state('count')).toEqual(1);
     app.find('.up').simulate('click');
@@ -20,7 +22,7 @@ describe('<Counter/> (Enzyme Test)', () => {
   });
 
   it('can count down', () => {
-    let app = mount(<Counter />);
+    const app = mount(<Counter />);
     app.find('.down').simulate('click');
     expect(app.state('count')).toEqual(-1);
     app.find('.down').simulate('click');
@@ -28,7 +30,8 @@ describe('<Counter/> (Enzyme Test)', () => {
   });
 
   it('visually displays proper polarity and value on the count element', () => {
-    let app = mount(<Counter />);
+    // eslint-disable-next-line no-undef
+    const app = mount(<Counter />);
     expect(app.find('.count.negative').exists()).toBeFalsy();
     expect(app.find('.count.positive').exists()).toBeFalsy();
     // Go to 1
@@ -52,7 +55,7 @@ describe('<Counter/> (Enzyme Test)', () => {
 describe('<Counter/> Core Component (Snapshot Test)', () => {
   it('renders right', () => {
     const component = renderer.create(<Counter />);
-    let tree = component.toJSON();
+    const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });
 });

@@ -1,10 +1,10 @@
 'use strict';
 
 // Code below provided by Vinicio
-import Enzyme, {shallow, render, mount} from 'enzyme';
+import Enzyme, { shallow, render, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-Enzyme.configure({ adapter: new Adapter()});
+Enzyme.configure({ adapter: new Adapter() });
 
 global.shallow = shallow;
 global.render = render;
