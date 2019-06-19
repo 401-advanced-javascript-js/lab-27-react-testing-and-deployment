@@ -14,7 +14,7 @@
 
 <!-- * [jsdoc](http://xyz.com) (Server assignments) -->
 
-- [styleguide](./styleguide/build/index.html)
+- [styleguide](./styleguide/index.html)
 
 #### Running the app
 
