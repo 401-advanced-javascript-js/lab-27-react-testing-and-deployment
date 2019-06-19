@@ -3,7 +3,7 @@ db
 .env
 .idea
 temp
-build
+/build
 aws.yml
 *.crt
 *.key
